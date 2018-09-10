@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://deutsche-it-schule.com.ua/webroot/uploads/p/p22/shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<style>
+		.slide::before {
+			position: absolute;
+			top: 10px;
+			left: 80px;
+			padding-top: 15px;
+			width: 100%;
+			height: 100px;
+			background: url(./pictures/_DITS_logo.png) #fff no-repeat;
+			content: '';
+			text-align: center;
+		}
+		img.screenshot {
+			width: 50%;
+			position: relative;
+			left: 50px;
+		}
+	</style>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #22</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover::before {
+				display: none;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>На прошлом занятии изучали</h2>
+		<ul>
+			<li>AJAX</li>
+			<li>Promises</li>
+			<li>fetch</li>
+		</ul>
+		
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+
+		<ul>
+			<li>TDD</li>
+			<li>BDD</li>
+			<li>e2e</li>
+			<li>Рефакторинг</li>
+			<li>Архитектура приложения</li>
+			<li>qUnit</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Test driven development</h2>
+
+		<p>
+			Разработка с написанием тестов. <br>
+			Класический подход: <br>
+			Написание тестов -> Реализация логики -> Рефакторинг
+		</p>
+
+	</section>
+
+	<section class="slide">
+		<h2>Behaviour driven development</h2>
+
+		<p>
+			Написание теста, который описивает поведение, а не конкретный результат
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>e2e</h2>
+
+		<p>
+			Интеграционный тест, который описывает не только конкретный модуль а их интеграцию
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Рефакторинг</h2>
+
+		<ul>
+			<li>Переименование переменных</li>
+			<li>Глобализация повторяемого кода</li>
+			<li>Использование best practices</li>
+			<li>...</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>qUnit</h2>
+
+		<p>
+			QUnit.test( "hello test", function( assert ) { <br>
+				assert.ok( 10 > 5, "Passed!" ); <br>
+			}); <br>
+		</p>
+		<p>Подключить и запустить библиотеку</p>
+	</section>
+
+
+	<section class="slide">
+		<h2>qUnit</h2>
+
+		<ul>
+			<li>ok</li>
+			<li>equal</li>
+			<li>deepEqual</li>
+			<li>aync</li>
+		</ul>
+		<p>Реализовать умножение, вычитание, деление и вычетание. Покрыть тестами</p>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="https://deutsche-it-schule.com.ua/webroot/uploads/p/p22/shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>
