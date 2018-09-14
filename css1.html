@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>DITS</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>DITS</h1>
+	</header>
+
+	<section class="slide" id="cover">
+		<h2>Занятие #6</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.jpg" alt="Hands on the orange typewriter in a park">
+		</figure>
+		<style>
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size: 20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Будет рассмотрено</h2>
+		<ul>
+			<li>Управленые шрифтами</li>
+			<li>Цвета</li>
+			<li>Позиционирование елементов</li>
+			<li>Градиенты, тени, анимация</li>
+			<li>Media queries</li>
+			<li>Размеры шрифтов</li>
+			<li>Flexbox</li>
+			<li>Препроцессоры(Вступление)</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Управление шрифтами</h2>
+		<ul>
+			<li>@font-face
+				<ul>
+					<li>font-family</li>
+					<li>src (Несколько url)</li>
+					<li>font-style, font-weight</li>
+				</ul>
+			</li>
+			<li>Google fonts</li>
+		</ul>
+		<p>
+			Скачать <a href="https://www.1001freefonts.com/">здесь</a> шрифт <br>
+			Подключить и использовать <br>
+			Подключить <a href="https://fonts.google.com/">отсюда</a> шрифт и использовать <br>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Позиционирование</h2>
+		<ul>
+			<li>static, relative, absolute, fixed</li>
+		</ul>
+		<p>
+			Разместить два блока в ряд используя позиционирование <br>
+			Зафиксировать блок на странице при прокрутке <br>
+			Разместить два блока в ряд, второй должен залезть ПОД первый на 10 пикселей(z-index) <br>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Градиенты, тени, анимация</h2>
+		<ul>
+			<li>linear-gradient, radial-gradient, repeating-*-gradient</li>
+			<li>box-shadow</li>
+			<li> <a href="http://www.colorzilla.com/gradient-editor/">Gradient</a> </li>
+			<li>transition, animation @keyframes</li>
+			<li>transform</li>
+		</ul>
+		<p>
+			Используя ресурс создать и перенести себе градиент <br>
+			Реализовать тень для блока <br>
+			Реализовать плавный переход цвета за 1с и анимировать
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Media queries</h2>
+		<ul>
+			<li>@media(min-width: 800px)</li>
+		</ul>
+		<p>
+			Создать страницу с текстом на 12 и 16 пикселя <br>
+			Реализовать изменение размера текста от 768, 1024, 1360 пикселей екрана
+			к 15 и 20, 18 и 24, 24 и 32 пикселям шрифта соотвестенно
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Размеры шрифтов</h2>
+		<ul>
+			<li>@media(min-width: 800px)</li>
+		</ul>
+		<p>
+			Сделать то же, только с использованием относительных величин
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>Flexbox</h2>
+		<ul>
+			<li>Создать контейнер з 4 дочерними до 200px</li>
+			<li>Поменять оси отображение</li>
+			<li>Разместить в разных частях оси по вертикали и горизонтали</li>
+			<li>Порядок отображения</li>
+			<li>Относительная ширина</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Препроцессоры</h2>
+		<ul>
+			<li>LESS</li>
+			<li>Gulp, Grunt, Webpack</li>
+			<li>SASS</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Верстка макета</h2>
+		<ul>
+			<li>
+				Макет можно найти <a href="https://freebiesbug.com/psd-freebies/website-template/">здесь</a>
+			 </li>
+			<li>
+				Софт для нарезки макета <a href="https://avocode.com/welcome">AvoCode</a>
+			</li>
+			<li>
+				Главна я задача - уверенное использование всех возможностей CSS.
+				По этому 100% соответствие макету - не основное
+			</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Домашка</h2>
+		<ul>
+			<li>Документация <a href="https://sass-scss.ru/documentation/">Sass</a> </li>
+			<li>Сверстать dropdown(При наведении на пункт меню появляются пункты подменю)</li>
+			<li>Верстка макета, можно  <a href="https://freebiesbug.com/psd-freebies/website-template/">отсюда</a>(по возможности) </li>
+		</ul>
+	</section>
+
+
+	<section class="slide">
+		<h2>Полезные ссылки</h2>
+		<ul>
+			<li><a href="https://www.taniarascia.com/getting-started-with-grunt-and-sass/" target="_blank">Блог установка среды</a></li>
+			<li><a href="https://www.youtube.com/watch?v=VSQf10i0_7c" target="_blank">Видео</a></li>
+		</ul>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+</body>
+</html>
