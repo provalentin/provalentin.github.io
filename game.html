@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<div class="game-filed">
+    <div id="102" class="card-back"></div>
+    <div id="103" class="card-back"></div>
+    <div id="104" class="card-back"></div>
+    <div id="105" class="card-back"></div>
+    <div id="106" class="card-back"></div>
+    <div id="107" class="card-back"></div>
+    <div id="108" class="card-back"></div>
+    <div id="109" class="card-back"></div>
+    <div id="110" class="card-back"></div>
+    <div id="111" class="card-back"></div>
+    <div id="112" class="card-back"></div>
+    <div id="113" class="card-back"></div>
+    <div id="114" class="card-back"></div>
+
+    <div id="202" class="card-back"></div>
+    <div id="203" class="card-back"></div>
+    <div id="204" class="card-back"></div>
+    <div id="205" class="card-back"></div>
+    <div id="206" class="card-back"></div>
+    <div id="207" class="card-back"></div>
+    <div id="208" class="card-back"></div>
+    <div id="209" class="card-back"></div>
+    <div id="210" class="card-back"></div>
+    <div id="211" class="card-back"></div>
+    <div id="212" class="card-back"></div>
+    <div id="213" class="card-back"></div>
+    <div id="214" class="card-back"></div>
+
+    <div id="302" class="card-back"></div>
+    <div id="303" class="card-back"></div>
+    <div id="304" class="card-back"></div>
+    <div id="305" class="card-back"></div>
+    <div id="306" class="card-back"></div>
+    <div id="307" class="card-back"></div>
+    <div id="308" class="card-back"></div>
+    <div id="309" class="card-back"></div>
+    <div id="310" class="card-back"></div>
+    <div id="311" class="card-back"></div>
+    <div id="312" class="card-back"></div>
+    <div id="313" class="card-back"></div>
+    <div id="314" class="card-back"></div>
+
+    <div id="402" class="card-back"></div>
+    <div id="403" class="card-back"></div>
+    <div id="404" class="card-back"></div>
+    <div id="405" class="card-back"></div>
+    <div id="406" class="card-back"></div>
+    <div id="407" class="card-back"></div>
+    <div id="408" class="card-back"></div>
+    <div id="409" class="card-back"></div>
+    <div id="410" class="card-back"></div>
+    <div id="411" class="card-back"></div>
+    <div id="412" class="card-back"></div>
+    <div id="413" class="card-back"></div>
+    <div id="414" class="card-back"></div>
+
+</div>
+<button id="next_move" class="next_button">Next move</button>
+<script>
+    var Card = function(id) {
+        this.id = id;
+        this.isVisible = false;
+        //status:
+        // 0 - stack,
+        // 1 - first hand,
+        // 2 - second hand,
+        // 3 - out
+        this.status = 0;
+        this.hide = function(){
+            document.getElementById(this.id).style
+                .backgroundImage = "url('img/0.png'";
+        }
+        this.show = function(){
+            document.getElementById(this.id).style
+                .backgroundImage = "url('img/" + id + ".png')";
+        }
+    }
+
+    const FIRST_HAND_OFFSET_X = 100;
+    const FIRST_HAND_OFFSET_Y = 300;
+    const SECOND_HAND_OFFSET_X = 100;
+    const SECOND_HAND_OFFSET_Y = 0;
+    const CENTER_OFFSET_Y = 120;
+    const CENTER_OFFSET_Y2 = 170;
+    const TRASH_OFFSET_X = 600;
+    const CARD_HAND_WIDTH = 85;
+
+    var allCards = [];
+    var cards = [];
+    var allCardsString = [];
+    var firstHand = [];
+    var secondHand = [];
+    var centerStack = [];
+    var status = {};
+    var isGameOver = false;
+    var isFirstPlayer = true;
+    var currentPlayer = 1;
+    var mainKind = 0;
+
+    var stackSetup = function (){
+        console.log("stack setup");
+        for(var i = 1; i<5; i++) {
+            for(var j=2;j<15;j++) {
+                allCards.push(i * 100 + j);
+                allCardsString.push(i*100 + j + "");
+                cards.push(new Card(i * 100 + j));
+            }
+        }
+        for (var i = 0; i < 52; i++) {
+          cards[i].status = 0;   
+        }
+    }
+
+    var shuffle = function(array) {
+        let counter = array.length;
+        // While there are elements in the array
+        while (counter > 0) {
+            // Pick a random index
+            let index = Math.floor(Math.random() * counter);
+            // Decrease counter by 1
+            counter--;
+            // And swap the last element with it
+            let temp = array[counter];
+            array[counter] = array[index];
+            array[index] = temp;
+        }
+        return array;
+    }
+
+    var relayoutStack =  function() {
+        console.log("stack relayout");
+        for (var i = 0; i < 52; i++) {
+            if(cards[i].status === 0) {
+                var el = document.getElementById(cards[i].id);
+                el.style.top = (i * 2) + "px";
+                el.style.left = (i * 2) + "px";
+                el.style.zIndex = i+"";
+                cards[i].hide();
+            }
+        }
+        mainKind = getKind(cards[0].id);
+        var mainEl = document.getElementById(cards[0].id);
+        mainEl.style.top = (150) + "px";
+        cards[0].show();
+    }
+
+    var refillFirstHand = function() {
+        console.log("move to first hand");
+        var currentSize = getSize(1);
+        for(var i=currentSize;i<6;i++) {
+            var stackSize = getSize(0);
+            if(stackSize>0) {
+                cards[stackSize - 1].status = 1;
+            }
+        }
+    }
+
+    var refillSecondHand = function() {
+        console.log("move to second hand");
+        var currentSize = getSize(2);
+        for(var i=currentSize;i<6;i++) {
+            var stackSize = getSize(0);
+            if(stackSize>0) {
+                cards[stackSize - 1].status = 2;
+            }
+        }
+    }
+
+    function moveToCenter(index) {
+        console.log('click on index # ' + index);
+        if (cards[index].status === currentPlayer) {
+            if(isValidMove(index)) {
+                cards[index].status = 3;
+                centerStack.push(index);
+
+                renderSecondHand();
+                renderFirstHand();
+                renderCenter();
+
+                changePlayer();
+            }
+        }
+    }
+
+    function getKind(id){
+        return (id - (id%100))/100;
+    }
+
+    function getValue(id) { 
+        return id % 100;
+    }
+    
+    function isValidValue(id) {
+      var values = [];  
+      for(let i=0;i<centerStack.length;i++){
+           values.push(cards[centerStack[i]].id % 100);
+      }
+      console.log("on table values");
+      console.log(values);  
+      return values.includes(id%100);
+    }
+    
+    function isValidMove(index) {
+        var currentCardId = cards[index].id;
+        if(centerStack.length===0) return true;
+        if(centerStack.length % 2 === 1) {
+            var prevCardId = cards[centerStack[centerStack.length - 1]].id;
+            console.log("Current > Prev: "  + currentCardId + " " + prevCardId);
+            
+            if (getKind(currentCardId)===getKind(prevCardId)) {
+                return (currentCardId > prevCardId);
+            }else{
+              //TODO: need to check main kind
+              return getKind(currentCardId)===mainKind;   
+            }    
+        } else {
+          //TODO: check same kind and main kind
+          return isValidValue(currentCardId); //for test only, remove later
+        }
+    }
+
+    function changePlayer() {
+        if(currentPlayer === 2) {
+            currentPlayer = 1;
+        }else{
+            currentPlayer = 2;
+        }
+    }
+
+    var renderFirstHand = function() {
+        console.log("render first hand");
+        var localCounter = 0;
+        for(let i=0;i<52;i++){
+            if(cards[i].status===1) {
+                //firstHand.push(i);
+                localCounter++;
+                var el = document.getElementById(cards[i].id);
+                //console.log(el);
+                el.style.left = FIRST_HAND_OFFSET_X + localCounter * CARD_HAND_WIDTH+"px";
+                el.style.top = FIRST_HAND_OFFSET_Y+"px";
+                el.style.backgroundImage = "url('img/" + cards[i].id + ".png')";
+            }
+        }
+        //console.log(firstHand);
+    }
+
+    var renderSecondHand = function() {
+        console.log("render second hand");
+        var localCounter = 0;
+        for(let i=0;i<52;i++){
+            if(cards[i].status===2) {
+                //firstHand.push(i);
+                localCounter++;
+                var el = document.getElementById(cards[i].id);
+                el.style.left = SECOND_HAND_OFFSET_X + localCounter * CARD_HAND_WIDTH+"px";
+                el.style.top = SECOND_HAND_OFFSET_Y+"px";
+                //TODO: hide after testing
+                cards[i].show();
+            }
+        }
+    }
+    
+    var renderCenter = function() {
+        console.log("render center battle field");
+        var localCounter = 0;
+
+        //correct sequence
+        for(let i=0;i<centerStack.length;i++){
+            var el = document.getElementById(cards[centerStack[i]].id);
+            //console.log(el);
+            el.style.left = SECOND_HAND_OFFSET_X
+                + Math.floor((localCounter + 2) / 2) * CARD_HAND_WIDTH+"px";
+            el.style.top = localCounter %2==0?
+                CENTER_OFFSET_Y+"px":
+                CENTER_OFFSET_Y2+"px";
+            el.style.backgroundImage = "url('img/" + cards[centerStack[i]].id + ".png')";
+            el.style.zIndex = localCounter+"";
+            localCounter++;
+        }
+    }
+    
+    var renderTrash = function() {
+        console.log("render trash");
+        var localCounter = 0;
+        for(let i=0;i<52;i++){
+            if(cards[i].status===4) {
+                localCounter++;
+                var el = document.getElementById(cards[i].id);
+                el.style.left = TRASH_OFFSET_X + localCounter * 2+"px";
+                el.style.top = CENTER_OFFSET_Y+"px";
+            }
+        }
+    }
+
+    var getSize = function(status) {
+        var counter = 0;
+        for(let i=0;i<52;i++){
+            if(cards[i].status === status) {
+                counter++;
+            }
+        }
+        return counter;
+    }
+
+    function setupClickHandlers() {
+        for(let i=0;i<52;i++) {
+            document.getElementById(cards[i].id).onclick = function(){
+                moveToCenter(i);
+            }
+        }
+        document.getElementById("next_move").onclick = function(){
+            console.log("handle next move");
+            var isOK = centerStack.length % 2 === 0;
+            for(let i=0;i<52;i++) {
+                if(cards[i].status===3) {
+                    cards[i].status = isOK?4:currentPlayer;
+                    cards[i].hide();
+                }
+            }
+            changePlayer();
+            renderTrash();
+            refillFirstHand();
+            renderFirstHand();
+            refillSecondHand();
+            renderSecondHand();
+            centerStack = [];
+        };
+    }
+
+    stackSetup();
+    console.log(shuffle(cards));
+    relayoutStack();
+    refillFirstHand();
+    refillSecondHand();
+    renderFirstHand();
+    renderSecondHand();
+    renderCenter();
+    renderTrash();
+    setupClickHandlers();
+</script>
+</body>
+</html>
