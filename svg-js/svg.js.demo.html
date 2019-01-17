@@ -15,6 +15,27 @@
         <h1>svg.draw.js - Demo</h1>
 
         <div class="box">
+            <h2>Rectangle, mousedown/move/up to draw</h2>
+            <code>
+                var drawing = new SVG('rectNoClick').size('100%', '100%');
+                var rect = drawing.rect();
+
+                drawing.on('mousedown', function(e){
+                rect.draw(e);
+                }, false);
+
+                drawing.on('mouseup', function(e){
+                rect.draw('stop', e);
+                }, false);
+
+                rect.on('drawstop', function(){
+                // remove listener
+                });
+            </code>
+            <div id="rectNoClick"></div>
+        </div>
+
+        <div class="box">
             <h2>Rectangle, click to draw</h2>
             <code>
                 new SVG('rect').size('100%', '100%')
@@ -121,26 +142,7 @@
             <div id="polygonGridOnCtrl"></div>
         </div>
 
-        <div class="box">
-            <h2>Rectangle, mousedown/move/up to draw</h2>
-            <code>
-                var drawing = new SVG('rectNoClick').size('100%', '100%');
-                var rect = drawing.rect();
 
-                drawing.on('mousedown', function(e){
-                rect.draw(e);
-                }, false);
-
-                drawing.on('mouseup', function(e){
-                rect.draw('stop', e);
-                }, false);
-
-                rect.on('drawstop', function(){
-                // remove listener
-                });
-            </code>
-            <div id="rectNoClick"></div>
-        </div>
 
     </div>
 
