@@ -17,12 +17,32 @@
         <div class="box">
             <div id="rectNoClick"></div>
         </div>
-
+        <img id="img0" class="thumb" src="https://provalentin.github.io/roadimages/1277381680Image000004.jpg" width="128" height="96">
+        <img id="img1" class="thumb" src="https://provalentin.github.io/roadimages/1277381680Image000009.jpg" width="128" height="96">
+        <img id="img2" class="thumb" src="https://provalentin.github.io/roadimages/1277381680Image000014.jpg" width="128" height="96">
+        <img id="img3" class="thumb" src="https://provalentin.github.io/roadimages/1277381708Image000002.jpg" width="128" height="96">
+        <img id="img4" class="thumb" src="https://provalentin.github.io/roadimages/1277381708Image000007.jpg" width="128" height="96">
+        <img id="img5" class="thumb" src="https://provalentin.github.io/roadimages/1277381708Image000012.jpg" width="128" height="96">
+        <img id="img6" class="thumb" src="https://provalentin.github.io/roadimages/1277381708Image000017.jpg" width="128" height="96">
+        <img id="img7" class="thumb" src="https://provalentin.github.io/roadimages/1277381708Image000022.jpg" width="128" height="96">
+        <img id="img8" class="thumb" src="https://provalentin.github.io/roadimages/1277381750Image000004.jpg" width="128" height="96">
+        <img id="img9" class="thumb" src="https://provalentin.github.io/roadimages/1277381750Image000009.jpg" width="128" height="96">
     </div>
 
     <script src="https://svgjs.com/svg.draw.js/demo/svg.min.js"></script>
     <script src="https://svgjs.com/svg.draw.js/demo/svg.draw.min.js"></script>
     <script>
+
+        function setImageClickHandlers() {
+            for(let i=0;i<10;i++){
+               document.getElementById("img"+i).addEventListener("click", function() {
+                   console.log("click on img: " + this.id + " src:" + this.src );
+                   document.getElementById("rectNoClick").style.backgroundImage="url('"+this.src + "')";
+               });
+            }
+        }
+
+        setImageClickHandlers();
 
         function getRandomColor() {
              var letters = '0123456789ABCDEF'.split('');
@@ -71,29 +91,29 @@
         //keyboard events
         document.addEventListener('keydown', function(e){
                 console.log("keyCode: " + e.keyCode);
-                if(e.keyCode == 16){
+                if(e.keyCode == 16){ //Shift
                     isShiftPressed = true;
                 }
-                if(e.keyCode == 17){
+                if(e.keyCode == 17){ //Ctrl
                     isControlPressed = true;
                 }
-                if(e.keyCode == 18){
+                if(e.keyCode == 18){ //Alt
                     isAltPressed = true;
                 }
-                if(e.keyCode == 13){
+                if(e.keyCode == 13){ //enter
                     console.log(rect);
                     console.log(rect.attr('x'));
                     console.log(rect.attr('y'));
                     console.log(rect.attr('width'));
                     console.log(rect.attr('height'));
                 }
-                if(e.keyCode == 78) { //N
+                if(e.keyCode == 78) { //N => new rect
                     console.log("create new rect");
                     if(rect) rect.attr('stroke-width', 1);
                     rect = drawing.rect().attr('stroke-width',3).attr('fill','none');
                     rectList.push(rect);
                 }
-                if(e.keyCode == 80) { //P
+                if(e.keyCode == 80) { //P => previous
                     console.log("previous Rect");
 
                 }
@@ -143,6 +163,8 @@
                     }
                 }
             });
+
+
 
     </script><svg id="SvgjsSvg1002" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="2" height="0" style="opacity: 0; position: fixed; left: 100%; top: 100%; overflow: hidden;"><defs id="SvgjsDefs1003"></defs><path id="SvgjsPath1004"></path><polyline id="SvgjsPolyline1005" points="0,0"></polyline></svg>
 
