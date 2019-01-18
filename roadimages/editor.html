@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="description" content="Svg.draw.js : Demo-Page">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="demo.css">
+
+        <title>Svg.draw.js | Demo-Page</title>
+
+    </head>
+    <body>
+    <div id="container">
+        <h1>Demo</h1>
+
+        <div class="box">
+            <div id="rectNoClick"></div>
+        </div>
+        <img id="img0" class="thumb" src="https://provalentin.github.io/roadimages/1277381680Image000004.jpg" width="128" height="96">
+        <img id="img1" class="thumb" src="https://provalentin.github.io/roadimages/1277381680Image000009.jpg" width="128" height="96">
+        <img id="img2" class="thumb" src="https://provalentin.github.io/roadimages/1277381680Image000014.jpg" width="128" height="96">
+        <img id="img3" class="thumb" src="https://provalentin.github.io/roadimages/1277381708Image000002.jpg" width="128" height="96">
+        <img id="img4" class="thumb" src="https://provalentin.github.io/roadimages/1277381708Image000007.jpg" width="128" height="96">
+        <img id="img5" class="thumb" src="https://provalentin.github.io/roadimages/1277381708Image000012.jpg" width="128" height="96">
+        <img id="img6" class="thumb" src="https://provalentin.github.io/roadimages/1277381708Image000017.jpg" width="128" height="96">
+        <img id="img7" class="thumb" src="https://provalentin.github.io/roadimages/1277381708Image000022.jpg" width="128" height="96">
+        <img id="img8" class="thumb" src="https://provalentin.github.io/roadimages/1277381750Image000004.jpg" width="128" height="96">
+        <img id="img9" class="thumb" src="https://provalentin.github.io/roadimages/1277381750Image000009.jpg" width="128" height="96">
+    </div>
+
+    <script src="https://svgjs.com/svg.draw.js/demo/svg.min.js"></script>
+    <script src="https://svgjs.com/svg.draw.js/demo/svg.draw.min.js"></script>
+    <script>
+
+        function setImageClickHandlers() {
+            for(let i=0;i<10;i++){
+               document.getElementById("img"+i).addEventListener("click", function() {
+                   console.log("click on img: " + this.id + " src:" + this.src );
+                   document.getElementById("rectNoClick").style.backgroundImage="url('"+this.src + "')";
+               });
+            }
+        }
+
+        setImageClickHandlers();
+
+        function getRandomColor() {
+             var letters = '0123456789ABCDEF'.split('');
+             var color = '#';
+             for (var i = 0; i < 6; i++) {
+                 color += letters[Math.round(Math.random() * 15)];
+             }
+             return color;
+        }
+
+        var isControlPressed = false;
+        var isAltPressed = false;
+        var isShiftPressed = false;
+        var drawing = new SVG('rectNoClick').size('100%', '100%');
+        var rectList = [];
+        var p = 0;
+        var rect = drawing.rect().attr('stroke-width',3).attr('fill','none');;
+        drawing.on('mousedown', function(e){
+            console.log(e);
+            if(rect) rect.attr('stroke-width', 1);
+            rect = drawing.rect().attr('stroke-width',3).attr('fill','none');
+            rect.attr('stroke', getRandomColor());
+            rectList.push(rect);
+            rect.draw(e);
+            console.log("rectID: " + rect.id());
+        }, false);
+
+        drawing.on('mouseup', function(e){
+            //console.log(e);
+            rect.draw('stop', e);
+            //console.log(rectList);
+        }, false);
+
+        document.addEventListener('keyup', function(e){
+                console.log("keyUp keyCode: " + e.keyCode);
+                if(e.keyCode == 16){
+                    isShiftPressed = false;
+                }
+                if(e.keyCode == 17){
+                    isControlPressed = false;
+                }
+                if(e.keyCode == 18){
+                    isAltPressed = false;
+                }
+        });
+        //keyboard events
+        document.addEventListener('keydown', function(e){
+                console.log("keyCode: " + e.keyCode);
+                if(e.keyCode == 16){ //Shift
+                    isShiftPressed = true;
+                }
+                if(e.keyCode == 17){ //Ctrl
+                    isControlPressed = true;
+                }
+                if(e.keyCode == 18){ //Alt
+                    isAltPressed = true;
+                }
+                if(e.keyCode == 13){ //enter
+                    console.log(rect);
+                    console.log(rect.attr('x'));
+                    console.log(rect.attr('y'));
+                    console.log(rect.attr('width'));
+                    console.log(rect.attr('height'));
+                }
+                if(e.keyCode == 78) { //N => new rect
+                    console.log("create new rect");
+                    if(rect) rect.attr('stroke-width', 1);
+                    rect = drawing.rect().attr('stroke-width',3).attr('fill','none');
+                    rectList.push(rect);
+                }
+                if(e.keyCode == 80) { //P => previous
+                    console.log("previous Rect");
+
+                }
+                if(e.keyCode == 46) { //Del
+                    console.log("delete current Rect");
+                    rect.cancel();
+
+                }
+                if(e.keyCode == 68 || e.keyCode == 39) { //D or Right arrow
+                    console.log("move right");
+                    if(isControlPressed){
+                        let w = rect.attr('width');
+                        rect.attr('width', w + 1);
+                    }else{
+                        let cx = rect.attr('x');
+                        rect.attr('x', cx + 1);
+                    }
+                }
+                if(e.keyCode == 65 || e.keyCode == 37) { //A or Left arrow
+                    console.log("move left");
+                    if(isControlPressed){
+                        let w = rect.attr('width');
+                        rect.attr('width', w - 1);
+                    }else{
+                        let cx = rect.attr('x');
+                        rect.attr('x', cx - 1);
+                    }
+                }
+                if(e.keyCode == 87 || e.keyCode == 38) { //W or Up arrow
+                    console.log("move up");
+                    if(isControlPressed){
+                        let h = rect.attr('height');
+                        rect.attr('height', h - 1);
+                    }else{
+                        let cy = rect.attr('y');
+                        rect.attr('y', cy - 1);
+                    }
+                }
+                if(e.keyCode == 83 || e.keyCode == 40) { //S or Down arrow
+                    console.log("move down");
+                    if(isControlPressed){
+                        let h = rect.attr('height');
+                        rect.attr('height', h + 1);
+                    }else{
+                        let cy = rect.attr('y');
+                        rect.attr('y', cy + 1);
+                    }
+                }
+            });
+
+
+
+    </script><svg id="SvgjsSvg1002" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="2" height="0" style="opacity: 0; position: fixed; left: 100%; top: 100%; overflow: hidden;"><defs id="SvgjsDefs1003"></defs><path id="SvgjsPath1004"></path><polyline id="SvgjsPolyline1005" points="0,0"></polyline></svg>
+
+
+    <iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" style="display: none;" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}"></div></body>
+</html>
