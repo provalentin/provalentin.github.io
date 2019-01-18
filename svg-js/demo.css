@@ -5,16 +5,17 @@ width:100%;
 
 #container{
     margin:auto;
-    width:800px;
+    width:1340px;
     background:#aaa;
-    padding:20px;
+    padding:10px;
 }
 
 .box{
-    width:700px;
+    width:1290px;
     border:1px solid black;
     background:#ccc;
     margin:20px auto;
+    margin-bottom: 200px;
     padding:20px;
 }
 
@@ -34,10 +35,11 @@ h1{
 }
 
 .box div{
-    width:700px;
-    height:300px;
-    margin:20px 0 0;
+    width:1280px;
+    height:960px;
+    margin-top:20px;
+    margin-bottom:10px;
     border:1px solid black;
-    background:url('https://svgjs.com/svg.draw.js/demo/grid.png') #fff;
-    border-radius:10px;
+    background:url('https://provalentin.github.io/roadimages/1277381680Image000004.jpg') #fff;
+
 }
