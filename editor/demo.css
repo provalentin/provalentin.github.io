@@ -18,6 +18,16 @@ width:100%;
     padding:10px;
 }
 
+.list{
+    position: absolute;
+    top: 25px;
+    left: 890px;
+    width: 109px;
+    height: 480px;
+    background:#eee;
+    border:1px solid black;
+}
+
 h1{
     font-size:20px;
     margin-top:0 auto;

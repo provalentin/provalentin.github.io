@@ -11,7 +11,10 @@
 
     </head>
     <body>
-    <div id="container">
+    <div id="container" >
+        <ul id="labels" class="list">
+            Labels:
+        </ul>
         <div class="box">
             <div id="rectNoClick"></div>
         </div>
@@ -57,15 +60,22 @@
         var drawing = new SVG('rectNoClick').size('100%', '100%');
         var rectList = [];
         var p = 0;
-        var rect = drawing.rect().attr('stroke-width',3).attr('fill','none');;
+        var rect = drawing.rect().attr('stroke-width',4).attr('fill','none');;
         drawing.on('mousedown', function(e){
             console.log(e);
-            if(rect) rect.attr('stroke-width', 1);
-            rect = drawing.rect().attr('stroke-width',3).attr('fill','none');
-            rect.attr('stroke', getRandomColor());
+            if(rect) rect.attr('stroke-width', 2);
+            rect = drawing.rect().attr('stroke-width',4).attr('fill','none');
+            let currentColor = getRandomColor();
+            rect.attr('stroke', currentColor);
             rectList.push(rect);
             rect.draw(e);
             console.log("rectID: " + rect.id());
+            var ul = document.getElementById("labels");
+            var li = document.createElement("li");
+            li.style.color = currentColor;
+            li.style.fontWeight = "bold";
+            li.appendChild(document.createTextNode("" + rect.id()));
+            ul.appendChild(li);
         }, false);
 
         drawing.on('mouseup', function(e){
@@ -107,8 +117,8 @@
                 }
                 if(e.keyCode === 78) { //N => new rect
                     console.log("create new rect");
-                    if(rect) rect.attr('stroke-width', 1);
-                    rect = drawing.rect().attr('stroke-width',3).attr('fill','none');
+                    if(rect) rect.attr('stroke-width', 2);
+                    rect = drawing.rect().attr('stroke-width',4).attr('fill','none');
                     rectList.push(rect);
                 }
                 if(e.keyCode === 80) { //P => previous
