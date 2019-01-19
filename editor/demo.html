@@ -12,8 +12,6 @@
     </head>
     <body>
     <div id="container">
-        <h1>Demo</h1>
-
         <div class="box">
             <div id="rectNoClick"></div>
         </div>
@@ -26,7 +24,7 @@
         <img id="img6" class="thumb" src="https://provalentin.github.io/roadimages/1277381708Image000017.jpg" width="128" height="96">
         <img id="img7" class="thumb" src="https://provalentin.github.io/roadimages/1277381708Image000022.jpg" width="128" height="96">
         <img id="img8" class="thumb" src="https://provalentin.github.io/roadimages/1277381750Image000004.jpg" width="128" height="96">
-        <img id="img9" class="thumb" src="https://provalentin.github.io/roadimages/1277381750Image000009.jpg" width="128" height="96">
+        <!--<img id="img9" class="thumb" src="https://provalentin.github.io/roadimages/1277381750Image000009.jpg" width="128" height="96">-->
     </div>
 
     <script src="https://svgjs.com/svg.draw.js/demo/svg.min.js"></script>
@@ -34,7 +32,7 @@
     <script>
 
         function setImageClickHandlers() {
-            for(let i=0;i<10;i++){
+            for(let i=0;i<9;i++){
                document.getElementById("img"+i).addEventListener("click", function() {
                    console.log("click on img: " + this.id + " src:" + this.src );
                    document.getElementById("rectNoClick").style.backgroundImage="url('"+this.src + "')";
@@ -91,38 +89,38 @@
         //keyboard events
         document.addEventListener('keydown', function(e){
                 console.log("keyCode: " + e.keyCode);
-                if(e.keyCode == 16){ //Shift
+                if(e.keyCode === 16){ //Shift
                     isShiftPressed = true;
                 }
-                if(e.keyCode == 17){ //Ctrl
+                if(e.keyCode === 17){ //Ctrl
                     isControlPressed = true;
                 }
-                if(e.keyCode == 18){ //Alt
+                if(e.keyCode === 18){ //Alt
                     isAltPressed = true;
                 }
-                if(e.keyCode == 13){ //enter
+                if(e.keyCode === 13){ //enter
                     console.log(rect);
                     console.log(rect.attr('x'));
                     console.log(rect.attr('y'));
                     console.log(rect.attr('width'));
                     console.log(rect.attr('height'));
                 }
-                if(e.keyCode == 78) { //N => new rect
+                if(e.keyCode === 78) { //N => new rect
                     console.log("create new rect");
                     if(rect) rect.attr('stroke-width', 1);
                     rect = drawing.rect().attr('stroke-width',3).attr('fill','none');
                     rectList.push(rect);
                 }
-                if(e.keyCode == 80) { //P => previous
+                if(e.keyCode === 80) { //P => previous
                     console.log("previous Rect");
 
                 }
-                if(e.keyCode == 46) { //Del
+                if(e.keyCode === 46) { //Del
                     console.log("delete current Rect");
                     rect.cancel();
 
                 }
-                if(e.keyCode == 68 || e.keyCode == 39) { //D or Right arrow
+                if(e.keyCode === 68 || e.keyCode === 39) { //D or Right arrow
                     console.log("move right");
                     if(isControlPressed){
                         let w = rect.attr('width');
@@ -132,7 +130,7 @@
                         rect.attr('x', cx + 1);
                     }
                 }
-                if(e.keyCode == 65 || e.keyCode == 37) { //A or Left arrow
+                if(e.keyCode === 65 || e.keyCode === 37) { //A or Left arrow
                     console.log("move left");
                     if(isControlPressed){
                         let w = rect.attr('width');
@@ -142,7 +140,7 @@
                         rect.attr('x', cx - 1);
                     }
                 }
-                if(e.keyCode == 87 || e.keyCode == 38) { //W or Up arrow
+                if(e.keyCode === 87 || e.keyCode === 38) { //W or Up arrow
                     console.log("move up");
                     if(isControlPressed){
                         let h = rect.attr('height');
@@ -152,7 +150,7 @@
                         rect.attr('y', cy - 1);
                     }
                 }
-                if(e.keyCode == 83 || e.keyCode == 40) { //S or Down arrow
+                if(e.keyCode === 83 || e.keyCode === 40) { //S or Down arrow
                     console.log("move down");
                     if(isControlPressed){
                         let h = rect.attr('height');
