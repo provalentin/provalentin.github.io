@@ -19,7 +19,7 @@ var images = [
     "https://provalentin.github.io/roadimages/1277381674Image000006.jpg",
     "https://provalentin.github.io/roadimages/1277381674Image000011.jpg",
     "https://provalentin.github.io/roadimages/1277381674Image000016.jpg",
-    "https://provalentin.github.io/roadimages/1277381674Image000021.jpg",
+/**    "https://provalentin.github.io/roadimages/1277381674Image000021.jpg",
     "https://provalentin.github.io/roadimages/1277381680Image000004.jpg",
     "https://provalentin.github.io/roadimages/1277381680Image000009.jpg",
     "https://provalentin.github.io/roadimages/1277381680Image000014.jpg",
@@ -1969,4 +1969,5 @@ var images = [
     "https://provalentin.github.io/roadimages/1277391816Image000117.jpg",
     "https://provalentin.github.io/roadimages/1277391816Image000122.jpg",
     "https://provalentin.github.io/roadimages/1277391816Image000127.jpg",
+    */
 ]
