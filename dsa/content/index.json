@@ -1,0 +1,421 @@
+{
+  "dsa": {
+    "tier1": [
+      {
+        "id": "01",
+        "title": "Arrays & Strings Fundamentals",
+        "file": "content/01-arrays-strings-fundamentals.md",
+        "difficulty": "Easy",
+        "readTime": 12,
+        "category": "Fundamentals",
+        "description": "Master arrays and strings. Learn memory layout, indexing, and common patterns."
+      },
+      {
+        "id": "02",
+        "title": "Array Manipulation Patterns",
+        "file": "content/02-array-manipulation-patterns.md",
+        "difficulty": "Easy-Medium",
+        "readTime": 14,
+        "category": "Fundamentals",
+        "description": "Sliding window, two pointers, and prefix sum patterns for interview success."
+      },
+      {
+        "id": "03",
+        "title": "Linked Lists Fundamentals",
+        "file": "content/03-linked-lists-fundamentals.md",
+        "difficulty": "Easy",
+        "readTime": 11,
+        "category": "Fundamentals",
+        "description": "Understand linked lists, node structures, and when to use them over arrays."
+      },
+      {
+        "id": "04",
+        "title": "Stacks & Queues",
+        "file": "content/04-stacks-queues.md",
+        "difficulty": "Easy-Medium",
+        "readTime": 12,
+        "category": "Fundamentals",
+        "description": "LIFO and FIFO data structures with real-world applications and problems."
+      },
+      {
+        "id": "05",
+        "title": "Hash Maps & Hash Sets",
+        "file": "content/05-hash-maps-sets.md",
+        "difficulty": "Easy-Medium",
+        "readTime": 13,
+        "category": "Fundamentals",
+        "description": "O(1) lookups, collision handling, and common interview patterns."
+      },
+      {
+        "id": "06",
+        "title": "Binary Trees Fundamentals",
+        "file": "content/06-binary-trees-fundamentals.md",
+        "difficulty": "Easy-Medium",
+        "readTime": 15,
+        "category": "Fundamentals",
+        "description": "Tree structure, traversals (inorder, preorder, postorder, level-order), and key properties."
+      },
+      {
+        "id": "07",
+        "title": "Tree Traversal Patterns",
+        "file": "content/07-tree-traversal-patterns.md",
+        "difficulty": "Easy-Medium",
+        "readTime": 14,
+        "category": "Fundamentals",
+        "description": "Advanced traversal techniques and path-finding patterns in trees."
+      },
+      {
+        "id": "08",
+        "title": "Graph Fundamentals",
+        "file": "content/08-graph-fundamentals.md",
+        "difficulty": "Medium",
+        "readTime": 13,
+        "category": "Fundamentals",
+        "description": "Graph types, representations, and basic graph algorithms."
+      },
+      {
+        "id": "09",
+        "title": "Depth-First Search (DFS)",
+        "file": "content/09-dfs-algorithm.md",
+        "difficulty": "Medium",
+        "readTime": 12,
+        "category": "Fundamentals",
+        "description": "DFS implementation, patterns, and use cases for path-finding and connectivity."
+      },
+      {
+        "id": "10",
+        "title": "Breadth-First Search (BFS)",
+        "file": "content/10-bfs-algorithm.md",
+        "difficulty": "Medium",
+        "readTime": 12,
+        "category": "Fundamentals",
+        "description": "BFS implementation for shortest path and level-order traversal."
+      },
+      {
+        "id": "11",
+        "title": "Complexity Analysis Deep Dive",
+        "file": "content/11-complexity-analysis.md",
+        "difficulty": "Medium",
+        "readTime": 16,
+        "category": "Fundamentals",
+        "description": "Big O notation, time/space complexity, and practical optimization limits."
+      },
+      {
+        "id": "12",
+        "title": "Interview Patterns & Cheat Sheet",
+        "file": "content/12-interview-patterns-cheatsheet.md",
+        "difficulty": "Medium",
+        "readTime": 18,
+        "category": "Fundamentals",
+        "description": "10 essential patterns that solve 80% of interview problems with templates and examples."
+      }
+    ],
+    "tier2": [
+      {
+        "id": "13",
+        "title": "Binary Search Trees (BST)",
+        "file": "content/13-binary-search-trees.md",
+        "difficulty": "Medium",
+        "readTime": 13,
+        "category": "Intermediate",
+        "description": "BST operations (search, insert, delete), validation, and applications."
+      },
+      {
+        "id": "14",
+        "title": "Heaps & Priority Queues",
+        "file": "content/14-heaps-priority-queues.md",
+        "difficulty": "Medium",
+        "readTime": 14,
+        "category": "Intermediate",
+        "description": "Heap operations, priority queues, and top-k problems."
+      },
+      {
+        "id": "15",
+        "title": "Dynamic Programming Fundamentals",
+        "file": "content/15-dynamic-programming-fundamentals.md",
+        "difficulty": "Medium",
+        "readTime": 15,
+        "category": "Intermediate",
+        "description": "DP concepts, memoization vs tabulation, and classic DP problems."
+      },
+      {
+        "id": "16",
+        "title": "Advanced DP: State Machine",
+        "file": "content/16-advanced-dp-state-machine.md",
+        "difficulty": "Hard",
+        "readTime": 14,
+        "category": "Intermediate",
+        "description": "Multi-state DP for complex constraints (stock trading, cooldown)."
+      },
+      {
+        "id": "17",
+        "title": "Advanced DP: Game Theory",
+        "file": "content/17-advanced-dp-game-theory.md",
+        "difficulty": "Hard",
+        "readTime": 13,
+        "category": "Intermediate",
+        "description": "Minimax DP for two-player games and optimal play."
+      },
+      {
+        "id": "18",
+        "title": "Segment Trees & Fenwick Trees",
+        "file": "content/18-segment-trees.md",
+        "difficulty": "Hard",
+        "readTime": 15,
+        "category": "Intermediate",
+        "description": "Range queries and updates with segment and Fenwick trees."
+      },
+      {
+        "id": "19",
+        "title": "String Matching Algorithms",
+        "file": "content/19-string-matching.md",
+        "difficulty": "Hard",
+        "readTime": 12,
+        "category": "Intermediate",
+        "description": "KMP, Rabin-Karp, and Boyer-Moore pattern matching."
+      },
+      {
+        "id": "20",
+        "title": "Bit Manipulation",
+        "file": "content/20-bit-manipulation.md",
+        "difficulty": "Hard",
+        "readTime": 13,
+        "category": "Intermediate",
+        "description": "Bitwise operations and common bit manipulation tricks."
+      },
+      {
+        "id": "21",
+        "title": "Recursion & Backtracking",
+        "file": "content/21-recursion-backtracking.md",
+        "difficulty": "Hard",
+        "readTime": 14,
+        "category": "Intermediate",
+        "description": "Backtracking template and problems (N-Queens, permutations)."
+      },
+      {
+        "id": "22",
+        "title": "Sliding Window Advanced",
+        "file": "content/22-sliding-window-advanced.md",
+        "difficulty": "Hard",
+        "readTime": 12,
+        "category": "Intermediate",
+        "description": "Monotonic deque and multi-pointer window techniques."
+      }
+    ],
+    "tier3": [
+      {
+        "id": "23",
+        "title": "Graph Coloring & Bipartite",
+        "file": "content/23-graph-coloring-bipartite.md",
+        "difficulty": "Hard",
+        "readTime": 11,
+        "category": "Advanced",
+        "description": "Graph coloring and bipartite checking algorithms."
+      },
+      {
+        "id": "24",
+        "title": "Complexity Analysis Cheat Sheet",
+        "file": "content/24-complexity-cheatsheet.md",
+        "difficulty": "Medium",
+        "readTime": 8,
+        "category": "Reference",
+        "description": "Quick reference for time/space complexity of algorithms and operations."
+      },
+      {
+        "id": "25",
+        "title": "Algorithm Selection Guide",
+        "file": "content/25-algorithm-selection-guide.md",
+        "difficulty": "Medium",
+        "readTime": 10,
+        "category": "Reference",
+        "description": "Decision tree for choosing the right algorithm for your problem."
+      },
+      {
+        "id": "26",
+        "title": "LRU Cache (Advanced Data Structure)",
+        "file": "content/26-lru-cache-advanced.md",
+        "difficulty": "Hard",
+        "readTime": 12,
+        "category": "Advanced",
+        "description": "Hash map + doubly linked list for O(1) cache operations."
+      },
+      {
+        "id": "27",
+        "title": "Concurrency Problems (Advanced)",
+        "file": "content/27-concurrent-problems.md",
+        "difficulty": "Hard",
+        "readTime": 11,
+        "category": "Advanced",
+        "description": "Threading, synchronization primitives, and concurrent design patterns."
+      },
+      {
+        "id": "28",
+        "title": "Advanced Graph Algorithms",
+        "file": "content/28-advanced-graph-algorithms.md",
+        "difficulty": "Hard",
+        "readTime": 14,
+        "category": "Advanced",
+        "description": "Tarjan's SCC, Kruskal's, Prim's algorithms for MST and advanced graphs."
+      },
+      {
+        "id": "29",
+        "title": "Common Mistakes in Interviews",
+        "file": "content/29-common-mistakes-interview.md",
+        "difficulty": "Medium",
+        "readTime": 9,
+        "category": "Interview Guide",
+        "description": "Avoid common coding and algorithm mistakes during interviews."
+      },
+      {
+        "id": "30",
+        "title": "Code Templates for Interviews",
+        "file": "content/30-code-templates.md",
+        "difficulty": "Medium",
+        "readTime": 12,
+        "category": "Reference",
+        "description": "Ready-to-use templates for binary search, DFS, BFS, DP, backtracking."
+      },
+      {
+        "id": "31",
+        "title": "Data Structure Operations Reference",
+        "file": "content/31-data-structure-operations.md",
+        "difficulty": "Medium",
+        "readTime": 8,
+        "category": "Reference",
+        "description": "Quick reference for time complexity of all data structure operations."
+      },
+      {
+        "id": "32",
+        "title": "Interview Communication Guide",
+        "file": "content/32-interview-communication-guide.md",
+        "difficulty": "Medium",
+        "readTime": 10,
+        "category": "Interview Guide",
+        "description": "How to communicate your thinking and approach during technical interviews."
+      },
+      {
+        "id": "33",
+        "title": "Problem Type Recognition Guide",
+        "file": "content/33-problem-type-guide.md",
+        "difficulty": "Medium",
+        "readTime": 11,
+        "category": "Interview Guide",
+        "description": "Identify problem types and match them to the right algorithms."
+      },
+      {
+        "id": "34",
+        "title": "Final Interview Checklist",
+        "file": "content/34-final-interview-checklist.md",
+        "difficulty": "Easy",
+        "readTime": 7,
+        "category": "Interview Guide",
+        "description": "Complete checklist for interview day preparation and execution."
+      },
+      {
+        "id": "35",
+        "title": "Learning Roadmap: Zero to Interview-Ready",
+        "file": "content/35-learning-roadmap.md",
+        "difficulty": "Medium",
+        "readTime": 10,
+        "category": "Interview Guide",
+        "description": "12-16 week structured learning plan with daily schedule and metrics."
+      }
+    ]
+  },
+  "systemDesign": {
+    "fundamentals": [
+      {
+        "id": "36",
+        "title": "System Design Fundamentals: Scalability Concepts",
+        "file": "content/36-system-design-basics.md",
+        "difficulty": "Medium-Hard",
+        "readTime": 14,
+        "category": "System Design",
+        "description": "Master core system design concepts: scalability, availability, consistency, and CAP theorem."
+      },
+      {
+        "id": "37",
+        "title": "Load Balancing & Distributed Systems",
+        "file": "content/37-load-balancing.md",
+        "difficulty": "Medium-Hard",
+        "readTime": 13,
+        "category": "System Design",
+        "description": "Distribute traffic across servers. Learn algorithms, health checks, and session management."
+      },
+      {
+        "id": "38",
+        "title": "Database Design & Sharding Strategies",
+        "file": "content/38-database-design.md",
+        "difficulty": "Medium-Hard",
+        "readTime": 15,
+        "category": "System Design",
+        "description": "Design scalable databases. Replication, sharding, indexing, and normalization strategies."
+      },
+      {
+        "id": "39",
+        "title": "Caching Strategies & Distributed Caching",
+        "file": "content/39-caching-strategies.md",
+        "difficulty": "Medium",
+        "readTime": 12,
+        "category": "System Design",
+        "description": "Cache-aside, write-through, write-behind patterns. Redis, Memcached, cache invalidation."
+      },
+      {
+        "id": "40",
+        "title": "API Design & REST Principles",
+        "file": "content/40-api-design.md",
+        "difficulty": "Medium",
+        "readTime": 13,
+        "category": "System Design",
+        "description": "RESTful API design, HTTP methods, versioning, authentication, rate limiting."
+      },
+      {
+        "id": "41",
+        "title": "Monitoring, Logging & Observability",
+        "file": "content/41-monitoring-logging.md",
+        "difficulty": "Medium",
+        "readTime": 11,
+        "category": "System Design",
+        "description": "Logs, metrics, and traces. Dashboards, alerting, on-call rotation, and observability."
+      }
+    ],
+    "caseStudies": [
+      {
+        "id": "42",
+        "title": "System Design Case Study: URL Shortener",
+        "file": "content/42-url-shortener.md",
+        "difficulty": "Hard",
+        "readTime": 12,
+        "category": "Case Study",
+        "description": "Design bit.ly-like URL shortening service. Base62 encoding, ID generation, caching."
+      },
+      {
+        "id": "43",
+        "title": "System Design Case Study: Chat System",
+        "file": "content/43-chat-system.md",
+        "difficulty": "Hard",
+        "readTime": 14,
+        "category": "Case Study",
+        "description": "Real-time messaging system. WebSocket, message queues, presence tracking, group chats."
+      },
+      {
+        "id": "44",
+        "title": "System Design Case Study: Video Streaming Service",
+        "file": "content/44-video-streaming.md",
+        "difficulty": "Hard",
+        "readTime": 14,
+        "category": "Case Study",
+        "description": "Netflix-like streaming platform. Encoding, CDN, adaptive bitrate, recommendations."
+      },
+      {
+        "id": "45",
+        "title": "System Design Case Study: Social Media Feed",
+        "file": "content/45-social-media-feed.md",
+        "difficulty": "Hard",
+        "readTime": 14,
+        "category": "Case Study",
+        "description": "Facebook/Twitter feed system. Fanout strategies, ranking algorithms, trending, search."
+      }
+    ]
+  }
+}

@@ -1,0 +1,554 @@
+/* ============================================
+   Article Styles
+   ============================================ */
+
+.article {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ============================================
+   Headings
+   ============================================ */
+
+.article h1,
+.article-h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 40px 0 20px 0;
+    color: var(--text-dark);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 12px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.article h2,
+.article-h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 32px 0 16px 0;
+    color: var(--text-dark);
+    line-height: 1.3;
+    letter-spacing: -0.3px;
+}
+
+.article h3,
+.article-h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 24px 0 12px 0;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+.article h4,
+.article-h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 16px 0 8px 0;
+    color: var(--text-dark);
+}
+
+.article h5 {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 12px 0 6px 0;
+    color: var(--text-dark);
+}
+
+.article h6 {
+    font-size: 12px;
+    font-weight: 700;
+    margin: 8px 0 4px 0;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Heading anchor links */
+.article h1:hover::before,
+.article h2:hover::before,
+.article h3:hover::before {
+    content: '#';
+    color: var(--primary-color);
+    margin-right: 8px;
+    opacity: 0;
+    animation: fadeIn 200ms forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 0.6;
+    }
+}
+
+/* ============================================
+   Paragraphs & Text
+   ============================================ */
+
+.article p {
+    margin-bottom: 16px;
+    line-height: 1.8;
+    color: var(--text-dark);
+    font-size: 15px;
+}
+
+.article p:last-child {
+    margin-bottom: 0;
+}
+
+.article strong,
+.article b {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.article em,
+.article i {
+    font-style: italic;
+    color: var(--text-light);
+}
+
+.article u {
+    text-decoration: underline;
+    text-decoration-color: var(--primary-light);
+    text-underline-offset: 2px;
+}
+
+.article del,
+.article s {
+    text-decoration: line-through;
+    color: var(--text-light);
+}
+
+.article mark {
+    background-color: rgba(245, 158, 11, 0.2);
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: inherit;
+}
+
+/* ============================================
+   Code Blocks & Inline Code
+   ============================================ */
+
+.article pre {
+    background-color: #f5f5f5;
+    padding: 16px;
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+    margin: 20px 0;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: var(--shadow-sm);
+    line-height: 1.5;
+}
+
+body.dark-mode .article pre {
+    background-color: #1f2937;
+    border-left-color: var(--primary-light);
+}
+
+.article pre code {
+    color: #333;
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+body.dark-mode .article pre code {
+    color: #e5e7eb;
+}
+
+/* Inline code */
+.article code,
+.article p code,
+.article li code,
+.article table code {
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+    font-size: 13px;
+    background-color: #f0f0f0;
+    color: #d63384;
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+}
+
+body.dark-mode .article code,
+body.dark-mode .article p code,
+body.dark-mode .article li code {
+    background-color: rgba(37, 99, 235, 0.15);
+    color: #60a5fa;
+}
+
+.article pre code {
+    padding: 0;
+    background-color: transparent;
+    color: inherit;
+}
+
+/* Code copy button (for future enhancement) */
+.code-block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e5e7eb;
+    padding: 8px 16px;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    font-size: 12px;
+    color: var(--text-dark);
+}
+
+/* ============================================
+   Lists
+   ============================================ */
+
+.article ul,
+.article ol,
+.article-list {
+    margin: 16px 0 16px 24px;
+    padding-left: 24px;
+}
+
+.article ul ul,
+.article ol ol,
+.article ul ol,
+.article ol ul {
+    margin: 8px 0 8px 0;
+}
+
+.article li {
+    margin: 8px 0;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+.article ul {
+    list-style-type: disc;
+}
+
+.article ul ul {
+    list-style-type: circle;
+}
+
+.article ol {
+    list-style-type: decimal;
+}
+
+.article li > ul,
+.article li > ol {
+    margin-top: 8px;
+}
+
+/* ============================================
+   Blockquotes
+   ============================================ */
+
+.article blockquote {
+    border-left: 4px solid var(--primary-color);
+    padding: 12px 16px;
+    margin: 20px 0;
+    background-color: var(--bg-lighter);
+    border-radius: var(--radius-md);
+    color: var(--text-light);
+    font-style: italic;
+    line-height: 1.8;
+}
+
+body.dark-mode .article blockquote {
+    background-color: rgba(37, 99, 235, 0.1);
+    border-left-color: var(--primary-light);
+}
+
+.article blockquote p {
+    margin: 0;
+}
+
+.article blockquote p + p {
+    margin-top: 8px;
+}
+
+/* ============================================
+   Tables
+   ============================================ */
+
+.article table,
+.article-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 24px 0;
+    font-size: 14px;
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.article table th,
+.article table td {
+    border: 1px solid var(--border-color);
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.article table th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.article table tbody tr {
+    transition: background-color var(--transition-base);
+}
+
+.article table tbody tr:hover {
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+.article table tbody tr:nth-child(even) {
+    background-color: var(--bg-lighter);
+}
+
+body.dark-mode .article table tbody tr:nth-child(even) {
+    background-color: rgba(37, 99, 235, 0.05);
+}
+
+/* ============================================
+   Links
+   ============================================ */
+
+.article a {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(37, 99, 235, 0.3);
+    transition: all var(--transition-base);
+    font-weight: 500;
+}
+
+.article a:hover {
+    color: var(--primary-dark);
+    border-bottom-color: var(--primary-dark);
+    background-color: rgba(37, 99, 235, 0.05);
+    padding-bottom: 2px;
+}
+
+.article a:active {
+    color: var(--primary-dark);
+}
+
+.article a:visited {
+    color: #7c3aed;
+}
+
+/* External links */
+.article a[target="_blank"]::after {
+    content: ' ↗';
+    font-size: 0.8em;
+    opacity: 0.6;
+}
+
+/* ============================================
+   Horizontal Rules
+   ============================================ */
+
+.article hr {
+    border: none;
+    border-top: 2px solid var(--border-color);
+    margin: 40px 0;
+}
+
+/* ============================================
+   Images
+   ============================================ */
+
+.article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    margin: 20px 0;
+    display: block;
+}
+
+.article figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.article figcaption {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* ============================================
+   Metadata (Read time, difficulty, etc.)
+   ============================================ */
+
+.article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 13px;
+    color: var(--text-light);
+    margin: 24px 0;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.meta-label {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.difficulty-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.difficulty-easy {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+}
+
+.difficulty-medium {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+}
+
+.difficulty-hard {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--error);
+}
+
+/* ============================================
+   Content sections (marked with ***)
+   ============================================ */
+
+.article hr + hr {
+    display: none;
+}
+
+/* ============================================
+   Responsive Typography
+   ============================================ */
+
+@media (max-width: 768px) {
+    .article h1,
+    .article-h1 {
+        font-size: 28px;
+        margin: 32px 0 16px 0;
+    }
+
+    .article h2,
+    .article-h2 {
+        font-size: 22px;
+        margin: 24px 0 12px 0;
+    }
+
+    .article h3,
+    .article-h3 {
+        font-size: 16px;
+        margin: 20px 0 10px 0;
+    }
+
+    .article p {
+        font-size: 14px;
+    }
+
+    .article pre {
+        padding: 12px;
+        font-size: 12px;
+        overflow-x: auto;
+    }
+
+    .article table {
+        font-size: 13px;
+        margin: 16px 0;
+    }
+
+    .article table th,
+    .article table td {
+        padding: 8px 12px;
+    }
+
+    .article-meta {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .article h1,
+    .article-h1 {
+        font-size: 24px;
+    }
+
+    .article h2,
+    .article-h2 {
+        font-size: 20px;
+    }
+
+    .article h3,
+    .article-h3 {
+        font-size: 16px;
+    }
+
+    .article p {
+        font-size: 14px;
+    }
+
+    .article ul,
+    .article ol {
+        margin-left: 16px;
+        padding-left: 16px;
+    }
+
+    .article pre {
+        padding: 12px;
+        font-size: 11px;
+        border-radius: var(--radius-sm);
+    }
+
+    .article table {
+        font-size: 12px;
+        overflow-x: auto;
+    }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+
+@media print {
+    .article {
+        max-width: 100%;
+    }
+
+    .article h1,
+    .article h2,
+    .article h3 {
+        page-break-after: avoid;
+    }
+
+    .article pre {
+        page-break-inside: avoid;
+    }
+
+    .article table {
+        page-break-inside: avoid;
+    }
+}
