@@ -597,5 +597,191 @@
         "description": "Analytics architecture. Lambda pattern, columnar storage, star schema, real-time dashboards, data quality."
       }
     ]
-  }
+  },
+  "advanced_dsa": [
+    {
+      "id": "66",
+      "title": "Advanced DSA: Geometry & Coordinate Problems",
+      "file": "content/66-geometry-problems.md",
+      "difficulty": "Hard",
+      "readTime": 12,
+      "category": "Advanced DSA",
+      "description": "Geometry algorithms. Distance, convex hull, line intersection, point in polygon, sweep line."
+    },
+    {
+      "id": "67",
+      "title": "Advanced DSA: Topological Sort & DFS Applications",
+      "file": "content/67-topological-sort.md",
+      "difficulty": "Hard",
+      "readTime": 11,
+      "category": "Advanced DSA",
+      "description": "Topological sort, cycle detection, strongly connected components, advanced DFS patterns."
+    },
+    {
+      "id": "68",
+      "title": "Advanced DSA: Union-Find (Disjoint Set Union)",
+      "file": "content/68-union-find.md",
+      "difficulty": "Medium-Hard",
+      "readTime": 10,
+      "category": "Advanced DSA",
+      "description": "Union-Find data structure. Union by rank, path compression, Kruskal's MST, cycle detection."
+    },
+    {
+      "id": "69",
+      "title": "Advanced DSA: Suffix Arrays & Advanced String Algorithms",
+      "file": "content/69-suffix-array.md",
+      "difficulty": "Hard",
+      "readTime": 11,
+      "category": "Advanced DSA",
+      "description": "Suffix arrays, LCP array, Z-algorithm, Manacher's, string hashing, pattern matching."
+    }
+  ],
+  "language_guides": [
+    {
+      "id": "70",
+      "title": "Language Guide: Java Collections & Data Structures",
+      "file": "content/70-java-collections.md",
+      "difficulty": "Medium",
+      "readTime": 10,
+      "category": "Reference",
+      "description": "Java ArrayList, HashMap, TreeMap, PriorityQueue, streams, common patterns for interviews."
+    },
+    {
+      "id": "71",
+      "title": "Language Guide: Python Built-ins for Interviews",
+      "file": "content/71-python-builtins.md",
+      "difficulty": "Medium",
+      "readTime": 10,
+      "category": "Reference",
+      "description": "Python list, dict, set, deque, Counter, heapq, sorting, common patterns for interviews."
+    },
+    {
+      "id": "72",
+      "title": "Language Guide: C++ STL Cheat Sheet",
+      "file": "content/72-cpp-stl.md",
+      "difficulty": "Medium",
+      "readTime": 10,
+      "category": "Reference",
+      "description": "C++ vector, map, set, priority_queue, algorithms, smart pointers, common patterns."
+    }
+  ],
+  "system_design_advanced": [
+    {
+      "id": "73",
+      "title": "System Design: Metrics & Calculations Reference",
+      "file": "content/73-system-design-metrics.md",
+      "difficulty": "Medium",
+      "readTime": 9,
+      "category": "Reference",
+      "description": "Back-of-envelope calculations, latency numbers, throughput, storage, cost calculations, quick estimations."
+    },
+    {
+      "id": "74",
+      "title": "System Design Case Study: Google Maps",
+      "file": "content/74-google-maps.md",
+      "difficulty": "Hard",
+      "readTime": 12,
+      "category": "Case Study",
+      "description": "Maps platform. Tile-based rendering, geospatial indexing, routing, real-time traffic, geocoding."
+    },
+    {
+      "id": "75",
+      "title": "System Design Case Study: Figma (Real-Time Collaborative Design)",
+      "file": "content/75-figma-design-system.md",
+      "difficulty": "Hard",
+      "readTime": 12,
+      "category": "Case Study",
+      "description": "Collaborative design tool. OT/CRDT, real-time sync, canvas rendering, version control, offline support."
+    },
+    {
+      "id": "76",
+      "title": "Advanced DSA: Greedy Algorithms Masterclass",
+      "file": "content/76-greedy-algorithms.md",
+      "difficulty": "Hard",
+      "readTime": 12,
+      "category": "Advanced DSA",
+      "description": "Greedy approach. Activity selection, Huffman coding, MST, job scheduling, proving greedy correctness."
+    },
+    {
+      "id": "77",
+      "title": "Advanced DSA: Divide & Conquer Deep Dive",
+      "file": "content/77-divide-conquer.md",
+      "difficulty": "Hard",
+      "readTime": 11,
+      "category": "Advanced DSA",
+      "description": "Divide & conquer paradigm. Merge sort, quick sort, closest pair, inversion count, Master Theorem."
+    },
+    {
+      "id": "78",
+      "title": "Advanced DSA: Graph Algorithms Cheat Sheet",
+      "file": "content/78-graph-algorithms-cheatsheet.md",
+      "difficulty": "Hard",
+      "readTime": 10,
+      "category": "Advanced DSA",
+      "description": "Graph algorithms reference. DFS, BFS, Dijkstra, Bellman-Ford, Kruskal, Prim, cycle detection."
+    },
+    {
+      "id": "79",
+      "title": "Advanced DSA: Math & Number Theory for Interviews",
+      "file": "content/79-math-number-theory.md",
+      "difficulty": "Hard",
+      "readTime": 10,
+      "category": "Advanced DSA",
+      "description": "Math for interviews. Primes, GCD, modular arithmetic, Fibonacci, combinatorics, bit manipulation."
+    },
+    {
+      "id": "80",
+      "title": "Advanced DSA: Binary Search Comprehensive Guide",
+      "file": "content/80-binary-search-guide.md",
+      "difficulty": "Hard",
+      "readTime": 10,
+      "category": "Advanced DSA",
+      "description": "Binary search mastery. Classic and variations, answer search, peak elements, rotated arrays, templates."
+    },
+    {
+      "id": "81",
+      "title": "Interview Preparation: Behavioral Interview Guide",
+      "file": "content/81-behavioral-interview.md",
+      "difficulty": "Medium",
+      "readTime": 10,
+      "category": "Interview Prep",
+      "description": "Behavioral interviews. STAR method, common questions, storytelling, red flags, tips by level."
+    },
+    {
+      "id": "82",
+      "title": "Interview Preparation: Salary Negotiation & Offer Guide",
+      "file": "content/82-salary-negotiation.md",
+      "difficulty": "Medium",
+      "readTime": 9,
+      "category": "Interview Prep",
+      "description": "Negotiation tactics. Research, equity, anchoring, multiple offers, equity analysis, mistake avoidance."
+    },
+    {
+      "id": "83",
+      "title": "Interview Preparation: Resume Tips for Tech Interviews",
+      "file": "content/83-resume-tips.md",
+      "difficulty": "Medium",
+      "readTime": 8,
+      "category": "Interview Prep",
+      "description": "Resume optimization. Format, bullet points, quantification, keywords, ATS, checklists by level."
+    },
+    {
+      "id": "84",
+      "title": "Interview Preparation: Whiteboarding Tips & Tricks",
+      "file": "content/84-whiteboarding-tips.md",
+      "difficulty": "Medium",
+      "readTime": 8,
+      "category": "Interview Prep",
+      "description": "Coding interviews. Clarification, approach, code style, testing, optimization, communication tips."
+    },
+    {
+      "id": "85",
+      "title": "Interview Preparation: Mock Interview Walkthrough",
+      "file": "content/85-mock-interview-walkthrough.md",
+      "difficulty": "Medium",
+      "readTime": 12,
+      "category": "Interview Prep",
+      "description": "Complete interview example. Rate limiter design with time allocation, scoring, and takeaways."
+    }
+  ]
 }

@@ -60,14 +60,33 @@ class App {
 
             // Flatten all articles for easy access
             allArticles = [];
+
+            // DSA Section
             if (catalog.dsa) {
                 if (catalog.dsa.tier1) allArticles.push(...catalog.dsa.tier1);
                 if (catalog.dsa.tier2) allArticles.push(...catalog.dsa.tier2);
                 if (catalog.dsa.tier3) allArticles.push(...catalog.dsa.tier3);
             }
+
+            // System Design Section
             if (catalog.systemDesign) {
                 if (catalog.systemDesign.fundamentals) allArticles.push(...catalog.systemDesign.fundamentals);
                 if (catalog.systemDesign.caseStudies) allArticles.push(...catalog.systemDesign.caseStudies);
+            }
+
+            // Advanced DSA Section
+            if (catalog.advanced_dsa && Array.isArray(catalog.advanced_dsa)) {
+                allArticles.push(...catalog.advanced_dsa);
+            }
+
+            // Language Guides Section
+            if (catalog.language_guides && Array.isArray(catalog.language_guides)) {
+                allArticles.push(...catalog.language_guides);
+            }
+
+            // System Design Advanced Section
+            if (catalog.system_design_advanced && Array.isArray(catalog.system_design_advanced)) {
+                allArticles.push(...catalog.system_design_advanced);
             }
 
             Log.success(`Catalog loaded: ${allArticles.length} articles`);
@@ -226,24 +245,19 @@ class App {
 
         navContent.innerHTML = '';
 
-        if (!catalog.dsa && !catalog.systemDesign) {
+        if (!catalog.dsa && !catalog.systemDesign && !catalog.advanced_dsa && !catalog.language_guides && !catalog.system_design_advanced) {
             navContent.innerHTML = '<p style="color: var(--text-light);">No articles available</p>';
             return;
         }
 
         // DSA Section
         if (catalog.dsa) {
-            // Tier 1: Fundamentals
             if (catalog.dsa.tier1 && catalog.dsa.tier1.length > 0) {
                 this.addNavSection('Fundamentals', catalog.dsa.tier1, navContent);
             }
-
-            // Tier 2: Intermediate
             if (catalog.dsa.tier2 && catalog.dsa.tier2.length > 0) {
                 this.addNavSection('Intermediate', catalog.dsa.tier2, navContent);
             }
-
-            // Tier 3: Advanced
             if (catalog.dsa.tier3 && catalog.dsa.tier3.length > 0) {
                 this.addNavSection('Advanced', catalog.dsa.tier3, navContent);
             }
@@ -254,10 +268,24 @@ class App {
             if (catalog.systemDesign.fundamentals && catalog.systemDesign.fundamentals.length > 0) {
                 this.addNavSection('System Design Basics', catalog.systemDesign.fundamentals, navContent);
             }
-
             if (catalog.systemDesign.caseStudies && catalog.systemDesign.caseStudies.length > 0) {
-                this.addNavSection('Case Studies', catalog.systemDesign.caseStudies, navContent);
+                this.addNavSection('System Design Case Studies', catalog.systemDesign.caseStudies, navContent);
             }
+        }
+
+        // Advanced DSA Section
+        if (catalog.advanced_dsa && Array.isArray(catalog.advanced_dsa) && catalog.advanced_dsa.length > 0) {
+            this.addNavSection('Advanced DSA Topics', catalog.advanced_dsa, navContent);
+        }
+
+        // Language Guides Section
+        if (catalog.language_guides && Array.isArray(catalog.language_guides) && catalog.language_guides.length > 0) {
+            this.addNavSection('Language Guides', catalog.language_guides, navContent);
+        }
+
+        // System Design Advanced Section
+        if (catalog.system_design_advanced && Array.isArray(catalog.system_design_advanced) && catalog.system_design_advanced.length > 0) {
+            this.addNavSection('System Design Advanced', catalog.system_design_advanced, navContent);
         }
 
         Log.success('Navigation built');
