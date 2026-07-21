@@ -505,6 +505,96 @@
         "readTime": 13,
         "category": "Case Study",
         "description": "HDFS architecture. Block model, replication, NameNode, fault tolerance, MapReduce."
+      },
+      {
+        "id": "56",
+        "title": "System Design Case Study: Instagram (Photo Sharing)",
+        "file": "content/56-instagram-photo-sharing.md",
+        "difficulty": "Hard",
+        "readTime": 14,
+        "category": "Case Study",
+        "description": "Photo platform. Image optimization, CDN, timeline generation, hashtag indexing, trending."
+      },
+      {
+        "id": "57",
+        "title": "System Design Case Study: Twitter (Distributed Tweet Service)",
+        "file": "content/57-twitter-service.md",
+        "difficulty": "Hard",
+        "readTime": 12,
+        "category": "Case Study",
+        "description": "Tweet platform. Snowflake IDs, fanout strategies, search with Elasticsearch, trending topics."
+      },
+      {
+        "id": "58",
+        "title": "System Design Case Study: Slack (Enterprise Messaging)",
+        "file": "content/58-slack-messaging.md",
+        "difficulty": "Hard",
+        "readTime": 12,
+        "category": "Case Study",
+        "description": "Messaging platform. WebSocket, threading, notifications, presence tracking, file sharing."
+      },
+      {
+        "id": "59",
+        "title": "System Design Case Study: Live Streaming Service",
+        "file": "content/59-live-streaming.md",
+        "difficulty": "Hard",
+        "readTime": 13,
+        "category": "Case Study",
+        "description": "Twitch-like streaming. RTMP ingest, HLS/DASH delivery, transcoding, adaptive bitrate, VOD."
+      },
+      {
+        "id": "60",
+        "title": "System Design Interview Guide",
+        "file": "content/60-system-design-guide.md",
+        "difficulty": "Medium",
+        "readTime": 11,
+        "category": "Interview Guide",
+        "description": "How to approach system design interviews. Clarification, estimation, trade-offs, communication tips."
+      },
+      {
+        "id": "61",
+        "title": "System Design: Rate Limiter",
+        "file": "content/61-rate-limiter.md",
+        "difficulty": "Medium",
+        "readTime": 10,
+        "category": "Advanced Topic",
+        "description": "Rate limiting algorithms. Token bucket, sliding window, distributed implementation, tiered limits."
+      },
+      {
+        "id": "62",
+        "title": "System Design: Key-Value Store",
+        "file": "content/62-key-value-store.md",
+        "difficulty": "Medium-Hard",
+        "readTime": 11,
+        "category": "Advanced Topic",
+        "description": "Distributed KV store. Sharding, consistent hashing, replication, eviction policies, persistence."
+      },
+      {
+        "id": "63",
+        "title": "System Design: Message Queue (Kafka-like)",
+        "file": "content/63-message-queue.md",
+        "difficulty": "Medium-Hard",
+        "readTime": 11,
+        "category": "Advanced Topic",
+        "description": "Message queue design. Partitioning, consumer groups, durability, ordering, exactly-once semantics."
+      },
+      {
+        "id": "64",
+        "title": "System Design: Distributed Cache",
+        "file": "content/64-distributed-cache.md",
+        "difficulty": "Medium-Hard",
+        "readTime": 10,
+        "category": "Advanced Topic",
+        "description": "Redis cluster. Hash slots, replication, failover, eviction, TTL, consistency models."
+      },
+      {
+        "id": "65",
+        "title": "System Design: Analytics System (Data Warehouse)",
+        "file": "content/65-analytics-system.md",
+        "difficulty": "Hard",
+        "readTime": 11,
+        "category": "Advanced Topic",
+        "description": "Analytics architecture. Lambda pattern, columnar storage, star schema, real-time dashboards, data quality."
       }
     ]
   }
