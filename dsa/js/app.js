@@ -65,6 +65,10 @@ class App {
                 if (catalog.dsa.tier2) allArticles.push(...catalog.dsa.tier2);
                 if (catalog.dsa.tier3) allArticles.push(...catalog.dsa.tier3);
             }
+            if (catalog.systemDesign) {
+                if (catalog.systemDesign.fundamentals) allArticles.push(...catalog.systemDesign.fundamentals);
+                if (catalog.systemDesign.caseStudies) allArticles.push(...catalog.systemDesign.caseStudies);
+            }
 
             Log.success(`Catalog loaded: ${allArticles.length} articles`);
         } catch (error) {
@@ -222,24 +226,38 @@ class App {
 
         navContent.innerHTML = '';
 
-        if (!catalog.dsa) {
+        if (!catalog.dsa && !catalog.systemDesign) {
             navContent.innerHTML = '<p style="color: var(--text-light);">No articles available</p>';
             return;
         }
 
-        // Tier 1: Fundamentals
-        if (catalog.dsa.tier1 && catalog.dsa.tier1.length > 0) {
-            this.addNavSection('Fundamentals', catalog.dsa.tier1, navContent);
+        // DSA Section
+        if (catalog.dsa) {
+            // Tier 1: Fundamentals
+            if (catalog.dsa.tier1 && catalog.dsa.tier1.length > 0) {
+                this.addNavSection('Fundamentals', catalog.dsa.tier1, navContent);
+            }
+
+            // Tier 2: Intermediate
+            if (catalog.dsa.tier2 && catalog.dsa.tier2.length > 0) {
+                this.addNavSection('Intermediate', catalog.dsa.tier2, navContent);
+            }
+
+            // Tier 3: Advanced
+            if (catalog.dsa.tier3 && catalog.dsa.tier3.length > 0) {
+                this.addNavSection('Advanced', catalog.dsa.tier3, navContent);
+            }
         }
 
-        // Tier 2: Intermediate
-        if (catalog.dsa.tier2 && catalog.dsa.tier2.length > 0) {
-            this.addNavSection('Intermediate', catalog.dsa.tier2, navContent);
-        }
+        // System Design Section
+        if (catalog.systemDesign) {
+            if (catalog.systemDesign.fundamentals && catalog.systemDesign.fundamentals.length > 0) {
+                this.addNavSection('System Design Basics', catalog.systemDesign.fundamentals, navContent);
+            }
 
-        // Tier 3: Advanced
-        if (catalog.dsa.tier3 && catalog.dsa.tier3.length > 0) {
-            this.addNavSection('Advanced', catalog.dsa.tier3, navContent);
+            if (catalog.systemDesign.caseStudies && catalog.systemDesign.caseStudies.length > 0) {
+                this.addNavSection('Case Studies', catalog.systemDesign.caseStudies, navContent);
+            }
         }
 
         Log.success('Navigation built');

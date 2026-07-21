@@ -415,6 +415,96 @@
         "readTime": 14,
         "category": "Case Study",
         "description": "Facebook/Twitter feed system. Fanout strategies, ranking algorithms, trending, search."
+      },
+      {
+        "id": "46",
+        "title": "System Design Case Study: Ride Sharing Service",
+        "file": "content/46-ride-sharing-service.md",
+        "difficulty": "Hard",
+        "readTime": 15,
+        "category": "Case Study",
+        "description": "Uber-like ride sharing. Location tracking, matching algorithm, surge pricing, payments."
+      },
+      {
+        "id": "47",
+        "title": "System Design Case Study: Recommendation System",
+        "file": "content/47-recommendation-system.md",
+        "difficulty": "Hard",
+        "readTime": 13,
+        "category": "Case Study",
+        "description": "Netflix/Amazon recommendations. Collaborative filtering, content-based, cold start, A/B testing."
+      },
+      {
+        "id": "48",
+        "title": "System Design Case Study: Notification System",
+        "file": "content/48-notification-system.md",
+        "difficulty": "Medium-Hard",
+        "readTime": 12,
+        "category": "Case Study",
+        "description": "Multi-channel notifications (email, SMS, push). Batching, retry logic, user preferences."
+      },
+      {
+        "id": "49",
+        "title": "System Design Case Study: E-Commerce Platform",
+        "file": "content/49-ecommerce-platform.md",
+        "difficulty": "Hard",
+        "readTime": 15,
+        "category": "Case Study",
+        "description": "Amazon-like platform. Product search, shopping cart, checkout, inventory, flash sales."
+      },
+      {
+        "id": "50",
+        "title": "System Design Case Study: Search Engine",
+        "file": "content/50-search-engine.md",
+        "difficulty": "Hard",
+        "readTime": 14,
+        "category": "Case Study",
+        "description": "Google Search-like engine. Crawlers, indexing, PageRank, query processing, ranking."
+      },
+      {
+        "id": "51",
+        "title": "System Design Case Study: Real-Time Collaboration Tool",
+        "file": "content/51-collaboration-tool.md",
+        "difficulty": "Hard",
+        "readTime": 13,
+        "category": "Case Study",
+        "description": "Google Docs-like collaboration. OT/CRDT, conflict resolution, version history, offline support."
+      },
+      {
+        "id": "52",
+        "title": "System Design Case Study: Payment System",
+        "file": "content/52-payment-system.md",
+        "difficulty": "Hard",
+        "readTime": 13,
+        "category": "Case Study",
+        "description": "Payment processing. Card charging, idempotency, fraud detection, PCI compliance, refunds."
+      },
+      {
+        "id": "53",
+        "title": "System Design Case Study: File Sharing System",
+        "file": "content/53-file-sharing-system.md",
+        "difficulty": "Medium-Hard",
+        "readTime": 12,
+        "category": "Case Study",
+        "description": "Dropbox-like system. Chunking, deduplication, sync, version history, sharing, trash."
+      },
+      {
+        "id": "54",
+        "title": "System Design Case Study: Booking System",
+        "file": "content/54-booking-system.md",
+        "difficulty": "Medium-Hard",
+        "readTime": 13,
+        "category": "Case Study",
+        "description": "Airbnb-like booking. Availability management, concurrent booking, pricing, cancellations."
+      },
+      {
+        "id": "55",
+        "title": "System Design Case Study: Distributed File System",
+        "file": "content/55-distributed-file-system.md",
+        "difficulty": "Hard",
+        "readTime": 13,
+        "category": "Case Study",
+        "description": "HDFS architecture. Block model, replication, NameNode, fault tolerance, MapReduce."
       }
     ]
   }
